@@ -10,6 +10,8 @@ let txtNumber = document.getElementById("Number");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 
+let fecha = document.getElementById("fecha");
+
 let contadorProductos = document.getElementById("contadorProductos"); //90
 let productosTotal = document.getElementById("productosTotal"); //97
 let precioTotal = document.getElementById("precioTotal"); //103
@@ -155,4 +157,7 @@ window.addEventListener("load", function (event) {
   contadorProductos.innerText = contador;
   productosTotal.innerText = totalEnProductos;
   precioTotal.innerText = `$ ${costoTotal.toFixed(2)}`;
+
+  let now = new Date();
+  fecha.innerText = now.getFullYear();
 }); //window load
